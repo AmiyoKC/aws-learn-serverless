@@ -1,38 +1,20 @@
 {
   "Records": [
     {
-      "eventVersion": "2.0",
-      "eventSource": "aws:s3",
-      "awsRegion": "us-east-1",
-      "eventTime": "1970-01-01T00:00:00.000Z",
-      "eventName": "ObjectCreated:Put",
-      "userIdentity": {
-        "principalId": "EXAMPLE"
+      "messageId": "059f36b4-87a3-44ab-83d2-661975830a7d",
+      "receiptHandle": "AQEBwJnKyrHigUMZj6rYigCgxlaS3SLy0a...",
+      "body": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"ap-southeast-2\",\"eventTime\":\"2026-09-12T12:59:59.060Z\",\"eventName\":\"ObjectCreated:Put\",\"userIdentity\":{\"principalId\":\"A2X4UAJFEKMLQA\"},\"requestParameters\":{\"sourceIPAddress\":\"122.170.198.56\"},\"responseElements\":{\"x-amz-request-id\":\"WJPYXZBRJ7FDP5DW\",\"x-amz-id-2\":\"V3lpUAiOE2LtX18P/u9LnVwThB7394xohS4h1GrhuwQabpxsto0TJ7ZsI7JSEAPk3PJeeOC1XmhZ8sPdWJ1NuvJxfy9Bsqr7\"},\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"sqs-event-notification\",\"bucket\":{\"name\":\"amiyo-tf-serverless-bucket-2026\",\"ownerIdentity\":{\"principalId\":\"A2X4UAJFEKMLQA\"},\"arn\":\"arn:aws:s3:::amiyo-tf-serverless-bucket-2026\"},\"object\":{\"key\":\"test.txt\",\"size\":24,\"eTag\":\"17b3ddc5b5b04dea37f306fa62553c43\",\"sequencer\":\"006AA54CCF0B5FC42F\"}}}]}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1526883000000",
+        "SenderId": "AIDAIENQZJOLO23YVJ4VO",
+        "ApproximateFirstReceiveTimestamp": "1526883000001"
       },
-      "requestParameters": {
-        "sourceIPAddress": "127.0.0.1"
-      },
-      "responseElements": {
-        "x-amz-request-id": "EXAMPLE123456789",
-        "x-amz-id-2": "EXAMPLE123/5678abcdefghijklambdaisawesome/mnopqrstuvwxyzABCDEFGH"
-      },
-      "s3": {
-        "s3SchemaVersion": "1.0",
-        "configurationId": "testConfigRule",
-        "bucket": {
-          "name": "amiyo-tf-serverless-bucket-2026",
-          "ownerIdentity": {
-            "principalId": "EXAMPLE"
-          },
-          "arn": "arn:aws:s3:::example-bucket"
-        },
-        "object": {
-          "key": "test.txt",
-          "size": 1024,
-          "eTag": "0123456789abcdef0123456789abcdef",
-          "sequencer": "0A1B2C3D4E5F678901"
-        }
-      }
+      "messageAttributes": {},
+      "md5OfBody": "7b270e59b47ff90a553787216d55d91d",
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:ap-southeast-2:571210199261:file-processing-queue",
+      "awsRegion": "ap-southeast-2"
     }
   ]
 }
