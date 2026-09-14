@@ -44,11 +44,5 @@ resource "aws_iam_role_policy_attachment" "lambda_sqs_access" {
 
 resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = aws_s3_bucket.file_upload_bucket.id
-
-  queue {
-    queue_arn = aws_sqs_queue.file_processing_queue.arn
-    events    = ["s3:ObjectCreated:*"]
-  }
-
-  depends_on = [aws_sqs_queue_policy.sqs_queue_policy]
+  eventbridge = true
 }
