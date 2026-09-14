@@ -18,11 +18,13 @@ resource "aws_sqs_queue_policy" "sqs_queue_policy" {
     Statement = [
       {
         Effect    = "Allow"
-        Principal = { Service = "s3.amazonaws.com" }
+        Principal = { Service = "events.amazonaws.com" }
         Action    = "sqs:SendMessage"
         Resource  = aws_sqs_queue.file_processing_queue.arn
         Condition = {
-          ArnEquals = { "aws:SourceArn" = aws_s3_bucket.file_upload_bucket.arn }
+          ArnEquals = {
+            "aws:SourceArn" = aws_cloudwatch_event_rule.s3_object_created.arn
+          }
         }
       }
     ]
